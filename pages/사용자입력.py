@@ -48,9 +48,12 @@ if name:
     st.write(f"🙋 이름: {name}")
 if age:
     st.write(f"🎂 나이: {int(age)}")
-st.write(f"🎨 좋아하는 색: {favorite_color}")
-st.write(f"🎯 취미: {hobby}")
-st.write(f"✅ 동의 여부: {'동의함' if agree else '동의하지 않음'}")
+if favorite_color:
+    st.write(f"🎨 좋아하는 색: {favorite_color}")
+if hobby:
+    st.write(f"🎯 취미: {hobby}")
+if agree:
+    st.write(f"✅ 동의 여부: {'동의함' if agree else '동의하지 않음'}")
 
 if text_content:
     st.markdown("📄 업로드한 텍스트 파일 내용:")
