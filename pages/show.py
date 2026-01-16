@@ -15,7 +15,7 @@ keyword = st.selectbox("Select keyword:", klist)
 st.write(keyword)
 
 plt.figure(figsize=(10,5))
-plt.plot(df['날짜'],df[keyword])
+plt.plot(df['날짜'], df[keyword])
 plt.xlabel('Year')
 plt.ylabel('cnt')
 plt.title('Trends')
