@@ -12,13 +12,12 @@ st.title("News data")
 
 # 키워드 선택
 keyword = st.selectbox("Select keyword:", klist)
-st.write(keyword)
-st.write(df.columns[0]=="날짜")
 
-plt.figure(figsize=(10,5))
-plt.plot(df['날짜'], df[keyword])
-plt.xlabel('Year')
-plt.ylabel('cnt')
-plt.title('Trends')
-st.pyplot(plt)
+fig, ax = plt.subplots(figsize=(10,5))
+ax.plot(df['날짜'], df[keyword])
+ax.set_xlabel('Year')
+ax.set_ylabel('cnt')
+ax.set_title('Trends')
+st.pyplot(fig)
+
 
