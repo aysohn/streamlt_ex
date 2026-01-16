@@ -13,6 +13,13 @@ st.title("News data")
 # 키워드 선택
 keyword = st.selectbox("Select keyword:", klist)
 
+st.write(df['날짜'].dtype)
+st.write(df['날짜'].head(10))
+st.write(df['날짜'].map(type).value_counts())
+st.write(df[df['날짜'].isna()].head())
+
+
+
 fig, ax = plt.subplots(figsize=(10,5))
 ax.plot(df['날짜'], df[keyword])
 ax.set_xlabel('Year')
