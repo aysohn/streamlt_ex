@@ -13,6 +13,7 @@ st.title("News data")
 # 키워드 선택
 keyword = st.selectbox("Select keyword:", klist)
 st.write(keyword)
+st.write(df.columns)
 
 plt.figure(figsize=(10,5))
 plt.plot(df['날짜'], df[keyword])
